@@ -17,10 +17,10 @@ public class GetInstructorDetailDemo {
                 .buildSessionFactory();
 
         // create session
+        Session session = factory.getCurrentSession();
 
         // create and save Student object to MySQL database
-        try (factory) {
-            Session session = factory.getCurrentSession();
+        try (factory; session) {
 
             // start a transaction
             session.beginTransaction();
@@ -40,6 +40,8 @@ public class GetInstructorDetailDemo {
 
             System.out.println("Done!");
 
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
