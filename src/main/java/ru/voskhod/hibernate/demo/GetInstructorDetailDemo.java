@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 import ru.voskhod.hibernate.demo.entity.Instructor;
 import ru.voskhod.hibernate.demo.entity.InstructorDetail;
 
-public class DeleteDemo {
+public class GetInstructorDetailDemo {
     public static void main(String[] args) {
 
         // create session factory
